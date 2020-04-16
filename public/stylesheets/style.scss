@@ -1,8 +1,115 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|PT+Sans:400,700&display=swap');
+
+// Normalize
+@import 'partials/normalize';
+
+// Colours
+@import 'partials/colours';
+
+:root {
+    --display-hero: none;
+    --display-nav: flex;
+    --hero-gradient: linear-gradient(164.92deg, #A36EF7 15.93%, #6EE0F7 124.45%);
+    --headings: 'PT Sans', sans-serif;
+    --paragraph: 'Didact Gothic', sans-serif;
+    --display-table-contents: none;
+    --container-width: initial;
 }
 
-a {
-  color: #00B7FF;
+body,p {
+    font-family: var(--paragraph);
+}
+
+@media (min-width: 576px) {
+    :root {
+        --display-hero: flex;
+        --display-nav: none;
+        --display-table-contents: flex;
+        --container-width: 60vw;
+    }
+}
+
+.hero {
+    display: var(--display-hero);
+    background: var(--hero-gradient);
+    height: 500px;
+    max-height: 500px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 50px;
+}
+
+.text-white {
+    color: $off-white;
+}
+
+.text-primary {
+    color: $primary;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.banner {
+    background: var(--hero-gradient);
+    display: var(--display-nav);
+    padding: 1em;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 250px;
+}
+
+h1,h2,h3 {
+    font-family: var(--headings)
+}
+
+article {
+    h2 {
+        color: $primary;
+        text-align: center;
+    }
+
+    p {
+        color: $grey-darker;
+    }
+}
+
+.container {
+    width: var(--container-width);
+    padding: 0 1em;
+}
+
+.hero-logo {
+    width: 100%;
+    height: 100%;
+}
+
+.table-contents {
+    display: var(--display-table-contents);
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.banner-body {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    svg {
+        margin: 1em 0;
+    }
 }

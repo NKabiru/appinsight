@@ -1,8 +1,11 @@
-<p align="center"><img src="./img/logo-light.svg" width="400" height="90"/></p>
+<p align="center"><img src="./public/images/logo-light.svg" width="400" height="90"/></p>
 
 ## Introduction
-This is a demo survey report as part of a CSS project.
+
+This is a demo survey report based on [ona.io](https://ona.io)'s forms and API.
 
 ## Built with
-- Parcel
+
+- Express
+- EJS
 - SCSS
