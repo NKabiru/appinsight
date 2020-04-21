@@ -1,11 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const ona = require('../services/ona')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  const data = ona.getForm();
-  console.log(data);
+router.get('/', async function(req, res, next) {
+  console.log(await ona.getData());
   res.render('index', { title: 'AppInsight' });
 });
 
