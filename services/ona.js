@@ -13,6 +13,12 @@ async function getData() {
 
 async function aggregate() {
     const data = await getData()
+    const oses = data.reduce(($carry, $item) => $carry.concat(' ', $item['What_os_do_you_currently_use']).trim(), '').split(' ')
+    let osCount = new Map()
+
+    oses.forEach(item => {
+      osCount.set(item, osCount.get(item) ? osCount.get(item) + 1 : 1)
+    })
 
     return {
       browsers: d3.rollup(data, v => v.length, d => d['Primary_Browser']),
@@ -20,7 +26,8 @@ async function aggregate() {
       officeSuites: d3.rollup(data, v => v.length, d => d['Office_Suite']),
       cloudStorage: d3.rollup(data, v => v.length, d => d['Cloud_Storage']),
       textEditors: d3.rollup(data, v => v.length, d => d['Preferred_Text_Editor']),
-      mailReaders: d3.rollup(data, v => v.length, d => d['Mail_Reader_Viewer'])
+      mailReaders: d3.rollup(data, v => v.length, d => d['Mail_Reader_Viewer']),
+      oses: osCount
     }
 }
 
