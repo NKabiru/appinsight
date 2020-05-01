@@ -75,10 +75,6 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum erat at aenean in in platea nec. Lorem erat eu arcu nisl tellus, lacus, massa viverra purus. Integer aliquam dolor vestibulum, auctor blandit fermentum sed at facilisis. Ac ornare ornare vel ut mauris, ipsum libero imperdiet. Aliquam fermentum consectetur senectus vestibulum phasellus platea quam. Vestibulum enim enim rhoncus, feugiat commodo. Nunc sed sed auctor.
                 </p>
 
-                <div>
-                    <!-- Chart goes here -->
-                    <!--  -->
-                </div>
             </article>
 
             <article id="operating-systems">
@@ -89,6 +85,22 @@
 
                 <div>
                     <!-- Chart goes here -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Operating System</th>
+                                <th>Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% aggregates.oses.forEach((value, key) => { %>
+                                <tr>
+                                    <td><%= key %></td>
+                                    <td> <%=  value %></td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
                 </div>
             </article>
 
@@ -100,6 +112,22 @@
 
                 <div>
                     <!-- Chart goes here -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Text Editors</th>
+                                <th>Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% aggregates.textEditors.forEach((value, key) => { %>
+                                <tr>
+                                    <td><%= key %></td>
+                                    <td> <%=  value %></td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
                 </div>
             </article>
 
@@ -111,6 +139,22 @@
 
                 <div>
                     <!-- Chart goes here -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mail Readers</th>
+                                <th>Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% aggregates.mailReaders.forEach((value, key) => { %>
+                                <tr>
+                                    <td><%= key %></td>
+                                    <td> <%=  value %></td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
                 </div>
             </article>
 
@@ -122,6 +166,23 @@
 
                 <div>
                     <!-- Chart goes here -->
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cloud Provider</th>
+                                <th>Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% aggregates.cloudStorage.forEach((value, key) => { %>
+                                <tr>
+                                    <td><%= key %></td>
+                                    <td> <%=  value %></td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
                 </div>
             </article>
 
@@ -133,6 +194,22 @@
 
                 <div>
                     <!-- Chart goes here -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Office Suite</th>
+                                <th>Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% aggregates.officeSuites.forEach((value, key) => { %>
+                                <tr>
+                                    <td><%= key %></td>
+                                    <td> <%=  value %></td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
                 </div>
             </article>
 
@@ -141,10 +218,6 @@
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum erat at aenean in in platea nec. Lorem erat eu arcu nisl tellus, lacus, massa viverra purus. Integer aliquam dolor vestibulum, auctor blandit fermentum sed at facilisis. Ac ornare ornare vel ut mauris, ipsum libero imperdiet. Aliquam fermentum consectetur senectus vestibulum phasellus platea quam. Vestibulum enim enim rhoncus, feugiat commodo. Nunc sed sed auctor.
                 </p>
-
-                <div>
-                    <!-- Chart goes here -->
-                </div>
             </article>
         </section>
     </main>
