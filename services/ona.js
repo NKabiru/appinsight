@@ -20,7 +20,7 @@ async function aggregate() {
       osCount.set(item, osCount.get(item) ? osCount.get(item) + 1 : 1)
     })
 
-    return {
+    let obj = {
       browsers: d3.rollup(data, v => v.length, d => d['Primary_Browser']),
       todos: d3.rollup(data, v => v.length, d => d['To_Do_Lists']),
       officeSuites: d3.rollup(data, v => v.length, d => d['Office_Suite']),
@@ -29,6 +29,12 @@ async function aggregate() {
       mailReaders: d3.rollup(data, v => v.length, d => d['Mail_Reader_Viewer']),
       oses: osCount
     }
+
+    Object.keys(obj).forEach((key) => {
+       obj[key] = Object.fromEntries(obj[key])
+    })
+
+    return obj;
 }
 
 module.exports = {
