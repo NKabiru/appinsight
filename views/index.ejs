@@ -88,22 +88,6 @@
                 <div>
                     <!-- Chart goes here -->
                     <canvas id="os-chart"></canvas>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Operating System</th>
-                                <th>Number</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <% aggregates.oses.forEach((value, key) => { %>
-                                <tr>
-                                    <td><%= key %></td>
-                                    <td> <%=  value %></td>
-                                </tr>
-                            <% }) %>
-                        </tbody>
-                    </table>
                 </div>
             </article>
 
@@ -115,22 +99,6 @@
 
                 <div>
                     <!-- Chart goes here -->
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Text Editors</th>
-                                <th>Number</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <% aggregates.textEditors.forEach((value, key) => { %>
-                                <tr>
-                                    <td><%= key %></td>
-                                    <td> <%=  value %></td>
-                                </tr>
-                            <% }) %>
-                        </tbody>
-                    </table>
                 </div>
             </article>
 
@@ -142,22 +110,6 @@
 
                 <div>
                     <!-- Chart goes here -->
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Mail Readers</th>
-                                <th>Number</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <% aggregates.mailReaders.forEach((value, key) => { %>
-                                <tr>
-                                    <td><%= key %></td>
-                                    <td> <%=  value %></td>
-                                </tr>
-                            <% }) %>
-                        </tbody>
-                    </table>
                 </div>
             </article>
 
@@ -169,23 +121,6 @@
 
                 <div>
                     <!-- Chart goes here -->
-
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Cloud Provider</th>
-                                <th>Number</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <% aggregates.cloudStorage.forEach((value, key) => { %>
-                                <tr>
-                                    <td><%= key %></td>
-                                    <td> <%=  value %></td>
-                                </tr>
-                            <% }) %>
-                        </tbody>
-                    </table>
                 </div>
             </article>
 
@@ -197,22 +132,6 @@
 
                 <div>
                     <!-- Chart goes here -->
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Office Suite</th>
-                                <th>Number</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <% aggregates.officeSuites.forEach((value, key) => { %>
-                                <tr>
-                                    <td><%= key %></td>
-                                    <td> <%=  value %></td>
-                                </tr>
-                            <% }) %>
-                        </tbody>
-                    </table>
                 </div>
             </article>
 
@@ -226,13 +145,3 @@
     </main>
 </body>
 </html>
-
-<script>
-    let ctx = document.getElementById('os-chart');
-    // let osChart = new Chart(ctx, {
-    //     data:
-    // })
-
-    console.log(<%- JSON.stringify(Object.fromEntries(aggregates.oses)) %>)
-
-</script>

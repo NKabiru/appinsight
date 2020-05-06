@@ -3,9 +3,13 @@ const router = express.Router();
 const ona = require('../services/ona');
 
 /* GET home page. */
-router.get('/',  async function(req, res, next) {
+router.get('/',  function(req, res, next) {
+  res.render('index');
+});
+
+router.get('/aggregates',  async function(req, res, next) {
   const aggregates = await ona.aggregate();
-  res.render('index', aggregates);
+  res.json(aggregates);
 });
 
 module.exports = router;
