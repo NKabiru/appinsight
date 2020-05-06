@@ -9,3 +9,4 @@ This is a demo survey report based on [ona.io](https://ona.io)'s forms and API.
 - Express
 - EJS
 - SCSS
+- Laravel Mix
