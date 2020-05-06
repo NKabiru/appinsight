@@ -61,5 +61,5 @@ typings/
 .next
 
 # built assets
-public/css
-publics/js
+public/css/
+public/js/
